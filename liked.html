@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Quotes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/liked.css') }}">
+</head>
+<body>
+    <div class="navbar">
+      <a href="{{ url_for('redirect_home') }}" class="home">Home</a>
+      <div class="yourquote">
+      Your Quote
+      </div>
+      <div class="menu">
+        <a href="{{ url_for('agb') }}" class="menu-item">AGB</a>
+        <a href="{{ url_for('aboutus') }}" class="menu-item">ABOUT US</a>
+        <a href="{{ url_for('logout') }}" class="menu-item">LOG OUT</a>
+      </div>
+  </div>
+    <div class="quote">
+        <textarea class="yourquotetext" id="yourquote" name="yourquote" rows="8" cols="80" readonly>
+          {% for liked_quote in liked_quotes %}
+            {{ liked_quote.quote.content}}
+          {% endfor %}
+        </textarea>
+    </div>
+</body>
+</html>

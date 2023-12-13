@@ -1,0 +1,38 @@
+.navbar {
+    color: green;
+    font-family: Arial;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.home {
+    color: green;
+    text-decoration: none;
+}
+
+.home:hover {
+    cursor: pointer;
+}
+
+
+.navbar .menu {
+  font-size: small;
+  margin: 10px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .menu .menu-item {
+  margin-right: 5px;
+  color: green;
+  justify-content: center;
+}
+
+
+.agbinfo {
+    font-size: 10px;
+
+}

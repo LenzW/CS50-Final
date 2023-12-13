@@ -1,0 +1,52 @@
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.yourquote {
+    color: green;
+    font-size: 30px;
+    font-family: arial;
+ 
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.loginlink{
+    color: green;
+    font-size: 20px;
+    font-family: arial;
+}
+
+.textfeld {
+    display: flex, grid;
+    flex-direction: column;
+  }
+
+
+  .quote {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.yourquotetext {
+  background-color: #FFFCF2;
+  color: green;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  resize: none;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px; 
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Quote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="navbar">
+      <a href="{{ url_for('redirect_home') }}" class="home">Home</a>
+        <div class="yourquote">
+        Your Quote
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('agb') }}" class="menu-item"></p>AGB</a>
+          <a href="{{ url_for('liked') }}"  class="menu-item"></p>LIKED</a>
+          <a href="{{ url_for('aboutus') }}"  class="menu-item"></p>ABOUT US</a>
+          <a href="{{ url_for('logout') }}"  class="menu-item"></p>LOG OUT</a>
+        </div>
+    </div>
+    <div class="textfeld">
+      <div class="quote">
+       <textarea class="yourquotetext" id="yourquote" name="yourquote" rows="8" cols="80" readonly>
+         "{{ quote.content | replace('\'', '') }}"
+       </textarea>
+       <div class="like-button-container">
+            <form action="{{ url_for('home') }}" method="POST">
+                <input type="hidden" name="content_id" value="{{ quote.id }}">
+                <button class="like-button" type="submit">
+                  <i class="fa fa-heart"></i>
+                </button>
+            </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
